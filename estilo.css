@@ -11,3 +11,8 @@ p {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: initial;
 }
+
+a {
+    font-family: sans-serif;
+    color: cadetblue;
+}
