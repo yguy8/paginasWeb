@@ -15,17 +15,19 @@ h3 {
     text-align-last: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-transform: uppercase;
-    color: rgb(43, 153, 226);
+    color: rgb(32, 160, 245);
 }
 
 /*los títulos de los poemas*/
 h4 {
+    text-align-last: right;
     font-size: x-large;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: initial;
 }
 
 p {
+    color: rgba(1, 6, 6, 0.594);
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -48,6 +50,10 @@ a:focus {
 }
 
 li {
+    border-color: aqua;
+    width: 150px;
+    margin: 10px 50px;
+    padding: 20px;
     text-align-last: center;
     list-style-type: none;
 }
