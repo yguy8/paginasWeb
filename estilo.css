@@ -48,6 +48,24 @@ div {
     display: flex;
 }
 
+div .inicio {
+    margin: 10px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+div .redes {
+    margin: 10px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 img {
     width: 5%;
     height: auto;
@@ -63,6 +81,14 @@ p {
     margin: 30px;
     font-size: 1.2em;
     text-align: justify;
+}
+
+footer {
+    background-color: #2bb4c8;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+    clear: both;
 }
 
 h4 {
