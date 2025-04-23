@@ -96,3 +96,10 @@ h4 {
     font-size: 2.5em;
     margin: 20px;
 }
+
+header {
+    background-color: #2bb4c8;
+    padding: 10px 0;
+    width: 100%;
+    clear: both;
+}
