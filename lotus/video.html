@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video de Fondo</title>
+    <title>Video de Fondo y Menú</title>
     <style>
         body,
         html {
@@ -24,24 +24,78 @@
             z-index: -1;
         }
 
-        .content {
-            position: relative;
+        .menu {
+            position: absolute;
+            top: 20px;
+            left: 20px;
             z-index: 1;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .menu a {
             color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .menu a:hover {
+            color: aqua;
+        }
+
+        p,
+        h2 {
             text-align: center;
-            padding-top: 20%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: rgb(209, 231, 39);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
+                -1px -1px 2px rgba(255, 255, 255, 0.7);
+        }
+
+        p:hover,
+        h2:hover {
+            color: aqua;
+        }
+
+        .contenedor {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* Ajusta según sea necesario */
+            background: rgba(14, 13, 13, 0.3);
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+            border: 1.5px solid rgba(34, 35, 36, 0.3);
+            width: 20rem;
+            height: auto;
+            padding: 2rem;
+            border-radius: 1rem;
+            font-size: 1rem;
+            color: rgb(37, 19, 19);
+            animation: fadeIn 2s ease-in-out 3s forwards;
+            /* 3s de retraso */
+        }
+
+        .contenedor:hover {
+            transform: scale(1.2);
         }
     </style>
 </head>
 
 <body>
     <video class="video-background" autoplay muted loop>
-        <source src="tu-video.mp4" type="video/mp4">
-        Tu navegador no soporta el elemento de video.
+        <source src="Lotus.mp4" type="video/mp4">
     </video>
-    <div class="content">
-        <h1>Bienvenido a mi sitio web</h1>
-        <p>Este es un ejemplo de video como fondo.</p>
+    <div class="menu">
+        <a href="web.html">Inicio</a>
+        <a href="video.html">Experiencia</a>
+        <a href="contacto.html">Contacto</a>
+    </div>
+    <h2><i><b>Lotus</b></i></h2><br>
+    <div class="contenedor">
+        <p>Busca proyectar el arte a travez de luces y sombras. <br> Mostrando la profundidad del ser humano.</p>
     </div>
 </body>
 
