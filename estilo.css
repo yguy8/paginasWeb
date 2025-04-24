@@ -39,7 +39,7 @@ a:hover {
 
 div {
     margin: 50px auto;
-    width: 90%;
+    width: 100%;
     max-width: 1000px;
     padding: 20px;
     background-color: #80a5e4a7;
@@ -48,44 +48,25 @@ div {
     display: flex;
 }
 
-.inicio {
-    margin: 10px auto;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    color: #d1bd5b;
+    font-size: 24px;
+    background-color: #2656b4;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-.redes {
-    margin: 10px auto;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.img {
-    columns: 1 400px;
-    column-gap:0.5 rem;
-    
-}
-
-img {
-    max-width:95%;
-    margin-bottom:0,5 rem;
-    display:block;
-    outline:2px solid #cfd386;
-    outline-offset:-10px;
-    margin-left: 5px;
-    border-radius: 10px;
-}
-
-img:hover {
-    opacity: 0.7;
+.cont:hover .texto {
+    opacity: 1;
 }
 
 p {
+    font-weight: bold;
     margin: 30px;
     font-size: 1.2em;
     text-align: justify;
@@ -99,11 +80,19 @@ footer {
     clear: both;
 }
 
-h4 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     text-align: start;
     font-size: 2.5em;
     margin: 20px;
+    color: #444441;
 }
+
+
 
 header {
     background-color: #2bb4c8;
