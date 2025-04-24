@@ -48,7 +48,7 @@ div {
     display: flex;
 }
 
-div .inicio {
+.inicio {
     margin: 10px auto;
     padding: 20px;
     display: flex;
@@ -57,18 +57,26 @@ div .inicio {
     flex-direction: column;
 }
 
-div .redes {
+.redes {
     margin: 10px auto;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+.img {
+    columns: 1 400px;
+    column-gap:0.5 rem;
+    
 }
 
 img {
-    width: 5%;
-    height: auto;
+    max-width:95%;
+    margin-bottom:0,5 rem;
+    display:block;
+    outline:2px solid #cfd386;
+    outline-offset:-10px;
     margin-left: 5px;
     border-radius: 10px;
 }
