@@ -42,6 +42,7 @@ nav {
 }
 
 .resaltar {
+    margin: 20px auto;
     width: 95%;
     height: auto;
     background: rgba(255, 255, 255, 0.1);
@@ -79,6 +80,11 @@ nav ul li a {
     text-decoration: none;
     color: #fffb03;
     font-weight: bold;
+}
+
+a {
+    color: #fffb03;
+    text-decoration: none;
 }
 
 a:hover {
@@ -142,7 +148,9 @@ footer {
     text-align: center;
     background-color: #3b3a3a;
     padding: 10px 0;
+    margin: 45px auto;
+    border-radius: 15px;
     bottom: 0;
-    width: 100%;
+    width: 90%;
     clear: both;
 }
