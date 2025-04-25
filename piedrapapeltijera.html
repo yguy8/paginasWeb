@@ -5,40 +5,57 @@
     <title>Juego de piedra, papel o tijera</title>
     <script>
       //piedra 1, papel 2, tijera 3
+      //calculo random de 1, 2, 3 de la pc 
+        function  aleatorio(min, max){
+          return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+      function eleccion(jugada){
+        let resultado = ""
+              if (jugada == 1){
+              resultado = "Piedra"
+          } else if (jugada == 2){
+              resultado = "Papel"
+          } else if (jugada == 3) {
+            resultado = "Tijera"
+          }else {
+            resultado = "Elegiste PERDER x_x"
+          }
+        return resutado
+        
+      }
+
+      
+      
         let jugador = 0
-        let pc = 2
-        jugador = prompt("Elige: 1 es para piedra, 2 es para papel y 3 es para tijera")
-      //jugador 
-      if (jugador == 1){
-          alert("Elegiste piedra")
-      } else if (jugador == 2){
-          alert("Elegiste papel")
-      } else if (jugador == 3) {
-        alert("Elegiste tijera")
-      }else {
-        alert("Elegiste PERDER x_x")
+        let pc = 0
+        let triunfos = 0
+        let perdidad = 0
+
+      function batalla (pc, jugador){
+        let mensaje = ""
+          if (pc == jugador){
+              mensaje = "Empate"
+            }else if ((jugador == 1 && pc == 3) || (jugador == 2 && pc == 1) || (jugador == 3 && pc == 2)){
+              mensaje = "Ganaste"
+              triunfos = triunfos + 1
+            }else {
+              mensaje = "Perdiste"
+              perdida = perdida + 1
+            }
       }
-      //alert("Elegiste: "+ jugador)
-      //Computador pc
-      if (pc == 1){
-          alert("Computador elige  piedra")
-      } else if (pc == 2){
-          alert("Computador elige papel")
-      } else if (pc == 3) {
-        alert("Computador elige tijera")
-      }
-      //Y se armaron los golpes fuertes el juego 
-      if (pc == jugador){
-        alert("Empate")
-      }else if (jugador == 1 && pc == 3){
-        alert("Ganaste")
-      }else if (jugador == 2 && pc == 1){
-        alert("Ganaste")
-      }else if (jugador == 3 && pc == 2){
-        alert("Ganaste")
-      }else {
-        alert("Perdiste")
-      }
+
+        while (triunfos < 3 && perdidas < 3){
+            jugador = prompt("Elige: 1 es para piedra, 2 es para papel y 3 es para tijera")
+            pc = aleatorio(1,3)
+            //Jugadores PC y USUARIO
+            alert("Computadora eligio " + eleccion(pc))
+            alert("Tu eliges " + eleccion(jugador))
+            
+            //Batala final
+            alert(batalla)
+            
+        }
+      alert("Ganaste: " + triunfos + "veces. Perdiste: " + perdidas + "veces")
       
     </script>
   </head>
