@@ -19,7 +19,7 @@
         <input type="radio" name="mascota" id="Tacupalma"> <br>
 
         <label for="Capipeo">Capipeo</label>
-        <input type="radio" name="mascota" id="Capipeo"> <br>
+        <input type="radio" name="mascota" id="Capipepo"> <br>
 
         <label for="Ratigueya">Ratigueya</label>
         <input type="radio" name="mascota" id="Ratigueya"> <br>
@@ -35,6 +35,8 @@
 
     <section id="ataque">
         <h2>Elige tu ataque: </h2>
+        <p>Tu mascota <span id="mascota-jugador"></span> tiene <span>3</span> vidas</p>
+        <p>La mascota <span id="mascota-enemigo"></span> de tu enemigo tiene <span>3</span> vidas</p>
         <button id="boton-fuego">Fuego 🔥</button>
         <button id="boton-agua">Agua 💧</button>
         <button id="boton-tierra">Tierra 🌱</button>
@@ -42,7 +44,8 @@
     </section>
 
     <section>
-        <p>Tu mascota atacó con FUEGO, la mascota del enemigo atacó con TIERRA</p>
+        <p>Tu mascota atacó con <span id="ataque-jugador"></span>, la mascota del enemigo atacó con <span
+                id="ataque-enemigo"></span></p>
         <button id="boton-reiniciar">Reiniciar 🔁</button>
     </section>
 
