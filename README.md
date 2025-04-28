@@ -16,4 +16,9 @@
 - tienda :
     es un proyecto que incluye una base de datos y muchos artículos
     es para prácticar desde diseño hasta bases de datos 
-    
+
+
+
+    ----------- NOTA PERSONAL -----------------
+
+  el directorio local se llama **paginaWeb/**
