@@ -23,4 +23,4 @@
 
     ----------- NOTA PERSONAL -----------------
 
-  el directorio local se llama **paginaWeb/**
+  el directorio local se llama **paginaWeb/** y el repo _paginasWeb_
