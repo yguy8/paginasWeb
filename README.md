@@ -1,5 +1,7 @@
 ## Este repositorio es para la prácticas que hago diseñando varias páginas con **CSS**, **HTML** y **JS** 
 
+![PáginaWeb](https://th.bing.com/th/id/OIP.v2TAZuWDPGisLglbSUaNPAAAAA?rs=1&pid=ImgDetMain)
+
 #### Las carpetas se dividen por sitios web que hago 
 
 - blog :
