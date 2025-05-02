@@ -1,9 +1,9 @@
 //alert("Hola")
 
 // variable de selección del tipo de ataque del jugador (VARIABLE GLOBAL)
-let ataqueJugador = document.getElementById("ataque-jugador")
+let ataqueJugador //= document.getElementById("ataque-jugador")
 //variable ataque enemigo (variable GLOBAL)
-let ataqueEnemigo = document.getElementById("ataque-enemigo")
+let ataqueEnemigo //= document.getElementById("ataque-enemigo")
 
 //funcion de iniciar juego que revisa si el navegador esta preparado
 function iniciarJuego() {
@@ -103,6 +103,28 @@ function ataqueAleatorioEnemigo() {
     } else {
         ataqueEnemigo = "Tierra"
     }
+    combate()
+}
+
+function combate() {
+    if (ataqueEnemigo == ataqueJugador) {
+        crearMensaje = "Empate"
+    } else if ((ataqueJugador == "Fuego" && ataqueEnemigo == "Tierra") || (ataqueJugador == "Agua" && ataqueEnemigo == "Fuego") || (ataqueJugador == "Tierra" && ataqueEnemigo == "Agua")) {
+        crearMensaje = "Ganaste"
+    } else {
+        crearMensaje = "Perdiste"
+    }
+
+}
+
+
+function crearMensaje(resultado) {
+    let sectionMensajes = document.getElementById("mensajes")
+
+    let parrafo = document.createElement('p')
+    parrafo.innerHTML("Tu mascota atacó con " + ataqueJugador + " , La mascota del enemigo atacó con " + ataqueEnemigo + " " + resultado)
+
+    sectionMensajes.appendChild(parrafo)
 }
 
 function aleatorio(min, max) {
