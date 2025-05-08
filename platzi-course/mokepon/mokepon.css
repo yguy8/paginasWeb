@@ -1,6 +1,18 @@
 :root {
     /*hacer variables de los colors*/
+    /*botones*/
     --colorDeBotonFuego: rgb(234, 96, 10);
+    --colorDeBotonAgua: rgb(3, 132, 237);
+    --colorDeBotonTierra: rgb(24, 196, 12);
+    /*letras títulos*/
+    --letrasMokepon: yellow;
+    --letrasTitulo: rgb(48, 90, 124);
+    /*letras múlticolor */
+    --verde: rgb(65, 209, 17);
+    --azul: rgb(2, 200, 255);
+    --rojo: rgba(255, 102, 0, 0.858);
+    /*otras letras */
+
 }
 
 body {
@@ -12,10 +24,11 @@ body {
     /* Evita que la imagen se repita */
     background-position: center;
     /* Centra la imagen en el fondo */
+
 }
 
 h1 {
-    color: yellow;
+    color: var(--letrasMokepon);
     text-align: center;
     text-shadow: 1px 1px 2px #000, 2px 2px 4px #555, 3px 3px 6px #aaa;
     font-family: "Sigmar", sans-serif;
@@ -55,7 +68,7 @@ h1 {
 h2 {
     text-shadow: 1px 1px 2px #000, 2px 2px 4px #555, 3px 3px 6px #aaa;
     text-align: center;
-    color: rgb(48, 90, 124);
+    color: var(--letrasTitulo);
     font-family: "Sigmar", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -71,15 +84,15 @@ h2 {
 
 @keyframes cambioColorDos {
     0% {
-        color: rgb(65, 209, 17);
+        color: var(--verde);
     }
 
     50% {
-        color: rgb(2, 200, 255);
+        color: var(--azul);
     }
 
     100% {
-        color: rgba(255, 102, 0, 0.858);
+        color: var(--rojo);
     }
 }
 
@@ -87,7 +100,7 @@ h2 {
 
 .caja {
     text-align: center;
-    color: rgb(48, 90, 124);
+    color: var(--letrasTitulo);
     font-family: "Sigmar", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -150,7 +163,7 @@ button {
 .agua {
     display: flex;
     align-items: center;
-    background-color: rgb(3, 132, 237);
+    background-color: var(--colorDeBotonAgua);
     color: #ffffff;
     cursor: pointer;
     margin: 5px;
@@ -159,7 +172,7 @@ button {
 .tierra {
     display: flex;
     align-items: center;
-    background-color: rgb(24, 196, 12);
+    background-color: var(--colorDeBotonTierra);
     color: #ffffff;
     cursor: pointer;
     margin: 5px;
@@ -169,7 +182,7 @@ button {
 p {
     /*background-color: #aaa;*/
     text-align: center;
-    color: rgb(48, 90, 124);
+    color: var(--letrasTitulo);
     font-family: "Sigmar", sans-serif;
     font-weight: 400;
     font-style: normal;
