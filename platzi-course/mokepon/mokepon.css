@@ -1,6 +1,6 @@
 :root {
     /*hacer variables de los colors*/
-    --colorDeBotonFuego:rgb(234, 96, 10);
+    --colorDeBotonFuego: rgb(234, 96, 10);
 }
 
 body {
@@ -111,10 +111,10 @@ h2 {
 }*/
 
 section {
-    margin-left: 250px;
+    margin-left: 180px;
     padding: 20px;
     display: grid;
-    width: 60%;
+    width: 75%;
     height: auto;
     background: rgba(110, 157, 228, 0.3);
     -webkit-backdrop-filter: blur(5px);
@@ -123,19 +123,23 @@ section {
 }
 
 button {
+    box-shadow: rgba(252, 252, 252, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(111, 107, 107, 0.968) 0px 4px 6px, rgba(26, 24, 24, 0.813) 0px 12px 13px, rgba(244, 245, 244, 0.808) 0px -3px 5px;
+    border-radius: 5px;
     font-family: "Sigmar", sans-serif;
     font-weight: 400;
     font-style: normal;
-    margin: auto;
+    margin-left: 300px;
     display: block;
-    width: 40%;
+    align-content: center;
+    width: 30%;
     padding: 10px;
     border-radius: 10px;
     background-color: rgba(60, 218, 17, 0.811);
+    gap: 10px;
 }
 
 .fuego {
-    display: block;
+    display: flex;
     align-items: center;
     background-color: var(--colorDeBotonFuego);
     color: #ffffff;
@@ -144,7 +148,7 @@ button {
 }
 
 .agua {
-    display: block;
+    display: flex;
     align-items: center;
     background-color: rgb(3, 132, 237);
     color: #ffffff;
@@ -153,7 +157,7 @@ button {
 }
 
 .tierra {
-    display: block;
+    display: flex;
     align-items: center;
     background-color: rgb(24, 196, 12);
     color: #ffffff;
@@ -163,6 +167,7 @@ button {
 
 .mensajes,
 p {
+    /*background-color: #aaa;*/
     text-align: center;
     color: rgb(48, 90, 124);
     font-family: "Sigmar", sans-serif;
@@ -190,13 +195,97 @@ p {
         transform: translateY(-10px);
     }
 }
-input{
-    diplay:none;
+
+input {
+    display: none;
 }
+
+img {
+    width: 120px;
+    height: auto;
+}
+
+/* tarjetitas de los mokepones*/
 
 div {
     display: flex;
+}
+
+.hipo {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 5px;
+    width: 200px;
+    height: auto;
     gap: 10px;
-    background-color: pink;
+    background-color: rgb(66, 197, 240);
     padding: 20px;
+    margin: 30px;
+}
+
+.tacu {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 5px;
+    width: 200px;
+    height: auto;
+    gap: 10px;
+    background-color: rgb(68, 255, 12);
+    padding: 20px;
+    margin: 30px;
+}
+
+.cap {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 5px;
+    width: 200px;
+    height: auto;
+    gap: 10px;
+    background-color: rgb(197, 249, 10);
+    padding: 20px;
+    margin: 30px;
+}
+
+.rat {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 5px;
+    width: 200px;
+    height: auto;
+    gap: 10px;
+    background-color: rgb(229, 190, 106);
+    padding: 20px;
+    margin: 30px;
+}
+
+.lan {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 5px;
+    width: 200px;
+    height: auto;
+    gap: 10px;
+    background-color: rgb(165, 106, 244);
+    padding: 20px;
+    margin: 30px;
+}
+
+.py {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 5px;
+    width: 200px;
+    height: auto;
+    gap: 10px;
+    padding: 20px;
+    margin: 30px;
+    background-color: rgb(246, 44, 77);
+}
+
+
+img:hover {
+    scale: 1.2;
+}
+
+button:hover {
+    scale: 1.2;
+}
+
+p:hover {
+    scale: 1.2;
 }
