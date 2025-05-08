@@ -5,47 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOKEPON! </title>
+    <link rel="stylesheet" href="mokepon.css">
     <script src="mokepon.js"></script>
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Sigmar&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
-    <h1>Mokepon! 🌱🔥💧</h1>
-    <section id="mascota">
-        <h2>Elige tu mascota: </h2>
-        <label for="Hipodoge">Hipodoge</label>
-        <input type="radio" name="mascota" id="Hipodoge"> <br>
-
-        <label for="Tacupalma">Tacupalma</label>
-        <input type="radio" name="mascota" id="Tacupalma"> <br>
-
-        <label for="Capipeo">Capipeo</label>
-        <input type="radio" name="mascota" id="Capipepo"> <br>
-
-        <label for="Ratigueya">Ratigueya</label>
-        <input type="radio" name="mascota" id="Ratigueya"> <br>
-
-        <label for="Langostelvia">Langostelvia</label>
-        <input type="radio" name="mascota" id="Langostelvia"> <br>
-
-        <label for="Pydos">Pydos</label>
-        <input type="radio" name="mascota" id="Pydos"> <br>
-
+    <h1 class="texto-animado">Mokepon! 🌱🔥💧</h1>
+    <section id="mascota" class="caja">
+        <h2 class="texto-animado-dos">Elige tu mascota: </h2>
+        <div>
+            <label for="Hipodoge">Hipodoge</label>
+            <input type="radio" name="mascota" id="Hipodoge"> <br>
+        </div>
+        <div>
+            <label for="Tacupalma">Tacupalma</label>
+            <input type="radio" name="mascota" id="Tacupalma"> <br>
+        </div>
+        <div>
+            <label for="Capipeo">Capipepo</label>
+            <input type="radio" name="mascota" id="Capipepo"> <br>
+        </div>
+        <div>
+            <label for="Ratigueya">Ratigueya</label>
+            <input type="radio" name="mascota" id="Ratigueya"> <br>
+        </div>
+        <div>
+            <label for="Langostelvia">Langostelvia</label>
+            <input type="radio" name="mascota" id="Langostelvia"> <br>
+        </div>
+        <div>
+            <label for="Pydos">Pydos</label>
+            <input type="radio" name="mascota" id="Pydos"> <br>
+        </div>
         <button id="boton-mascota">Seleccionar ✅</button>
     </section>
 
     <section id="ataque">
-        <h2>Elige tu ataque: </h2>
-        <p>Tu mascota <span id="mascota-jugador"></span> tiene <span id="vidas-jugador">3</span> vidas</p>
-        <p>La mascota <span id="mascota-enemigo"></span> de tu enemigo tiene <span id="vidas-enemigo">3</span> vidas</p>
+        <h2 class="texto-animado-dos">Elige tu ataque: </h2>
+        <p>Tu mascota <span id="mascota-jugador" class="animal"></span> tiene <span id="vidas-jugador"
+                class="vidas">3</span> vidas</p>
+        <p>La mascota <span id="mascota-enemigo" class="animal"></span> de tu enemigo tiene <span id="vidas-enemigo"
+                class="vidas">3</span> vidas</p>
         <p>
-            <button id="boton-fuego">Fuego 🔥</button>
-            <button id="boton-agua">Agua 💧</button>
-            <button id="boton-tierra">Tierra 🌱</button>
+            <button id="boton-fuego" class="fuego">Fuego 🔥</button>
+            <button id="boton-agua" class="agua">Agua 💧</button>
+            <button id="boton-tierra" class="tierra">Tierra 🌱</button>
         </p>
 
     </section>
 
-    <section id="mensajes">
+    <section id="mensajes" class="mensajes">
         <!--<p>Tu mascota atacó con <span id="ataque-jugador"> </span>, la mascota del enemigo atacó con <span id="ataque-enemigo"></span></p>-->
     </section>
 

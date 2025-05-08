@@ -1,0 +1,198 @@
+:root {
+    /*hacer variables de los colors*/
+}
+
+body {
+    background-image: url(./mokepon.png);
+    /*url de la imagen */
+    background-size: cover;
+    /* Ajusta la imagen para que cubra todo el fondo */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-position: center;
+    /* Centra la imagen en el fondo */
+}
+
+h1 {
+    color: yellow;
+    text-align: center;
+    text-shadow: 1px 1px 2px #000, 2px 2px 4px #555, 3px 3px 6px #aaa;
+    font-family: "Sigmar", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 45px;
+    display: inline-block;
+    animation: jump 1s infinite;
+    margin: 15px;
+}
+
+@keyframes jump {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+}
+
+/* Cambio de color 
+    font-size: 50px;
+    font-weight: bold;
+    animation: cambioColor 3s infinite;
+
+}
+
+@keyframes cambioColor {
+    0% { color: rgb(195, 182, 37); }
+    50% { color: rgb(255, 213, 0); }
+    100% { color: rgb(248, 248, 93); }
+}*/
+h2 {
+    text-shadow: 1px 1px 2px #000, 2px 2px 4px #555, 3px 3px 6px #aaa;
+    text-align: center;
+    color: rgb(48, 90, 124);
+    font-family: "Sigmar", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.texto-animado-dos {
+    font-size: 35px;
+    font-weight: bold;
+    animation: cambioColorDos 3s infinite;
+
+}
+
+@keyframes cambioColorDos {
+    0% {
+        color: rgb(65, 209, 17);
+    }
+
+    50% {
+        color: rgb(2, 200, 255);
+    }
+
+    100% {
+        color: rgba(255, 102, 0, 0.858);
+    }
+}
+
+
+
+.caja {
+    text-align: center;
+    color: rgb(48, 90, 124);
+    font-family: "Sigmar", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+/* Esto hacia qiue brincara
+   
+   font-size: 15px;
+    display: inline-block;
+    animation: jump 1s infinite;
+}
+
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}*/
+
+section {
+    margin-left: 250px;
+    padding: 20px;
+    display: grid;
+    width: 60%;
+    height: auto;
+    background: rgba(110, 157, 228, 0.3);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1.5px solid rgba(41, 113, 221, 0.3)
+}
+
+button {
+    font-family: "Sigmar", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: auto;
+    display: block;
+    width: 40%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(60, 218, 17, 0.811);
+}
+
+.fuego {
+    display: block;
+    align-items: center;
+    background-color: rgb(234, 96, 10);
+    color: #ffffff;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.agua {
+    display: block;
+    align-items: center;
+    background-color: rgb(3, 132, 237);
+    color: #ffffff;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.tierra {
+    display: block;
+    align-items: center;
+    background-color: rgb(24, 196, 12);
+    color: #ffffff;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.mensajes,
+p {
+    text-align: center;
+    color: rgb(48, 90, 124);
+    font-family: "Sigmar", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: larger;
+}
+
+.vidas,
+.animal {
+    color: rgb(194, 60, 60);
+    font-size: 20px;
+    display: inline-block;
+    animation: jumps 1s infinite;
+}
+
+@keyframes jumps {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+div {
+    display: grid;
+    background-color: pink;
+    margin: 10px;
+    padding: 20px;
+}
