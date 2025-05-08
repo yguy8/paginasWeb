@@ -189,10 +189,13 @@ p {
         transform: translateY(-10px);
     }
 }
+input{
+    diplay:none;
+}
 
 div {
-    display: grid;
+    display: flex;
+    gap: 10px;
     background-color: pink;
-    margin: 10px;
     padding: 20px;
 }
