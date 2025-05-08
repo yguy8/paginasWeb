@@ -1,5 +1,6 @@
 :root {
     /*hacer variables de los colors*/
+    --colorDeBotonFuego:rgb(234, 96, 10);
 }
 
 body {
@@ -136,7 +137,7 @@ button {
 .fuego {
     display: block;
     align-items: center;
-    background-color: rgb(234, 96, 10);
+    background-color: var(--colorDeBotonFuego);
     color: #ffffff;
     cursor: pointer;
     margin: 5px;
