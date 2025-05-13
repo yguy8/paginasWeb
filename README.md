@@ -14,8 +14,8 @@
 - paginaYPython :
     Es más un proyecto para convertir videos a mp3
 - platzi-course :
-    Es de las clases que he tomado en **Platzi**
-- tienda :
+    Es de las clases que he tomado en **Platzi** del curso básico de programación 
+- tienda : (en proceso..)
     es un proyecto que incluye una base de datos y muchos artículos
     es para prácticar desde diseño hasta bases de datos 
 
