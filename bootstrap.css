@@ -1,0 +1,7 @@
+[class *= 'col']/*seleccionar todos los elementos que coincidan con*/{
+  padding: 1rem;
+  background-color:purple;
+  border: 2px solid yellow;
+}
+
+/*dimensión de paginas .container-{breakpoint}*/
