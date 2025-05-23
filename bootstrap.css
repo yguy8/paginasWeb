@@ -4,4 +4,19 @@
   border: 2px solid yellow;
 }
 
-/*dimensión de paginas .container-{breakpoint}*/
+body{
+  background-color:blue;
+}
+
+
+/*dimensión de paginas .container-{breakpoint}
+
+Breakpoint	       Class infix	    Dimensions
+X-Small	              None	          <576px
+Small	                  sm	          ≥576px
+Medium	                md       	    ≥768px
+Large	                  lg	          ≥992px
+Extra large           	xl	          ≥1200px
+Extra extra large	     xxl	          ≥1400px
+
+*/
