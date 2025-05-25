@@ -158,8 +158,53 @@ img {
 .app .fila.generar .input-password:hover{
     border:1px solid rgba(255,255,255,.7);
 }
+/*fila alerta*/
 
+.app .fila.alerta{
+    justify-content:flex-end;
+}
+.app .fila.alerta .col{
+    width:65%;
+}
+.app .fila.alerta .alerta-copiado{
+    text-aling:center;
+    color:rgba(255,255,255,0);
+    transition:all .3s ease;
+}
+.app .fila.alerta .alerta-copiado.active{
+    color:rgba(255,255,255,1);
+}
+.app .fila.alerta .alerta-copiado p{
+   font-size:12px; 
+}   
 
-
-
+/*adaptable a dispositivos*/
     
+@media screen and (max-width:500px){
+    .logo img{
+        width:70%;
+    }
+    .app .fila{
+        flex-direction:column;
+        margin-bottom:20px;
+    }
+    .app .fila .col{
+        width:100%;
+        margin-bottom:20px;
+    }
+    .app .fila.generar{
+        border-top:1px solid rgba(255,255,255,.25);
+        padding-top:40px;
+    }
+    .app .fila.generar .col:nth-child(1),
+    .app .fila.generar .col:nth-child(2){
+        width:100%;
+    }
+    .app .fila.generar .btn.btn-generar:after{
+        top:auto;
+        left:50%;
+        right:50%;
+        bottom:-7px;
+    }
+}
+        
