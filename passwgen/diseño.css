@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    /*background-color: #ff9f06;*/
+    background: linear-gradient(to right, #ff9d00, #1596d2);
+    height: 100vh;
+    /* Asegura que el degradado cubra toda la pantalla */
+    margin: 0;
+
+
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+
+}
+
+/*Donde esta encerrado las funciones*/
+.contenedor {
+    max-width: 500px;
+    width: 90%;
+    margin: 40px auto;
+
+}
+
+/*logo de password generator*/
+img {
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.516);
+    border-radius: 10px;
+    width: 90%;
+    align-items: center;
+    margin-top: 5%;
+}
+
+/*Filas y columnas*/
+.app .fila {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.app .col {
+    width: 50%;
+}
+
+/*Estilos de inputs y botones*/
+.app label {
+    line-height: 40px;
+}
+
+.app input {
+    text-align: center;
+    border: none;
+}
+
+/*Botones*/
+.app .btn {
+    width: 100%;
+    height: 40px;
+    display: inline-block;
+    background-color: #365989;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    vertical-align: top;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.516);
+    transition: all .3s ease;
+}
+
+.app .btn:hover {
+    background-color: #0d3670;
+}
