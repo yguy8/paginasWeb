@@ -11,7 +11,6 @@ body {
     /* Asegura que el degradado cubra toda la pantalla */
     margin: 0;
 
-
     font-family: "Mulish", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
@@ -34,6 +33,7 @@ img {
     width: 90%;
     align-items: center;
     margin-top: 5%;
+    margin-bottom: 34px;
 }
 
 /*Filas y columnas*/
@@ -78,4 +78,171 @@ img {
 
 .app .btn:hover {
     background-color: #0d3670;
+}
+
+.app .btn.false {
+    background: #1d93c6;
+}
+
+/* ------------------------- */
+/* Fila: Numero de Caracteres */
+/* ------------------------- */
+.app .numero-caracteres .botones div {
+    width: 100%;
+}
+
+.app .numero-caracteres .botones div:nth-child(1) button {
+    border-radius: 4px 0 0 4px;
+
+}
+
+.app .numero-caracteres input {
+    margin-top: 23px;
+    margin-left: 5px;
+    height: 40px;
+    width: 90%;
+    cursor: default;
+    background: #60bffa;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    color: #464646;
+}
+
+.app .numero-caracteres .botones div:nth-child(2) button {
+    border-radius: 0 4px 4px 0;
+}
+
+.app .numero-caracteres .botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* ------------------------- */
+/* Fila: Generar Contraseña */
+/* ------------------------- */
+.app .fila.generar {
+    margin-bottom: 10px;
+}
+
+.app .fila.generar .col:nth-child(1) {
+    width: 30%;
+}
+
+.app .fila.generar .col:nth-child(2) {
+    width: 65%;
+}
+
+.app .fila.generar .btn.btn-generar {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    padding: 0;
+    line-height: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+
+.app .fila.generar .btn.btn-generar:after {
+    content: "";
+    display: inline-block;
+    background: #365989;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 13px;
+    right: -7px;
+    transform: rotate(45deg);
+    z-index: 9;
+    transition: all .3s ease;
+}
+
+.app .fila.generar .col:nth-child(1):hover .btn-generar:after {
+    background: #0d3670;
+}
+
+.app .fila.generar .input-password {
+    width: 100%;
+    background: none;
+    border-radius: 4px;
+    border: 1px solid rgb(57, 57, 57);
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.app .fila.generar .input-password:hover {
+    border: 1px solid rgba(255, 255, 255, .5);
+}
+
+.app .fila.generar input::selection {
+    background: #5a5acb;
+}
+
+.app .fila.generar input::-moz-selection {
+    background: #212139;
+}
+
+/* ------------------------- */
+/* Fila: Alerta */
+/* ------------------------- */
+.app .fila.alerta {
+    justify-content: flex-end;
+}
+
+.app .fila.alerta .col {
+    width: 65%;
+}
+
+.app .fila.alerta .alerta-copiado {
+    text-align: center;
+    color: rgba(255, 255, 255, 0);
+    transition: all .3s ease;
+}
+
+.app .fila.alerta .alerta-copiado.active {
+    color: rgba(255, 255, 255, 1);
+}
+
+.app .fila.alerta .alerta-copiado p,
+.app .fila.alerta .alerta-copiado i {
+    font-size: 12px;
+}
+
+/* ------------------------- */
+/* Media Queries */
+/* ------------------------- */
+@media screen and (max-width: 500px) {
+    .logo img {
+        width: 70%;
+    }
+
+    .app .fila {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .app .fila .col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .app .fila.generar {
+        border-top: 1px solid rgba(255, 255, 255, .25);
+        padding-top: 40px;
+    }
+
+    .app .fila.generar .col:nth-child(1),
+    .app .fila.generar .col:nth-child(2) {
+        width: 100%;
+    }
+
+    .app .fila.generar .btn.btn-generar:after {
+        top: auto;
+        left: 50%;
+        right: 50%;
+        bottom: -7px;
+    }
 }
