@@ -18,7 +18,7 @@
     es para prácticar desde diseño hasta bases de datos 
 - **bootstrap** : 
     una prueba para usar bootstrap que solo es para ver sus funciones e importar el framework
--**passwgen** :
+- **passwgen** :
     un generador de contraseñas hecho en javascript
 
 
