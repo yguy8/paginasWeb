@@ -13,15 +13,10 @@
   con la paleta de color que manejo en ella queria hacer algo más personalen cuanto a gustos y estilos de diseño expreimental
 - **platzi-course** :
     Es de las clases que he tomado en **Platzi** del curso básico de programación 
-- **tienda** : (en proceso..)
-    es un proyecto que incluye una base de datos y muchos artículos
-    es para prácticar desde diseño hasta bases de datos 
 - **bootstrap** : 
     una prueba para usar bootstrap que solo es para ver sus funciones e importar el framework
 - **passwgen** :
     un generador de contraseñas hecho en javascript
 
 
-    ----------- NOTA PERSONAL -----------------
-
-  el directorio local se llama **paginaWeb/** y el repo **_paginasWeb_**
+  
