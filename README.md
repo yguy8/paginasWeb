@@ -4,9 +4,6 @@
 
 #### Las carpetas se dividen por sitios web que hago 
 
-- **blog** :
-   Aquí hablo un poco de como ayudar a los que inician a programar y contiene
-  varios recursos para iniciar (según mi experiencia)
 - **lotus** :
   Es una página que contiene muchas imagenes que la hacen ver muy bien
   un estilo bastente moderno en cuanto al diseño ya que evoca muchas emociones
