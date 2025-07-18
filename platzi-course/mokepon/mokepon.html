@@ -1,94 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOKEPON! </title>
+    <meta charset="utf-8" />
+    <title>MOKEPON!</title>
     <link rel="stylesheet" href="mokepon.css">
-    <!--google fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Sigmar&display=swap"
-        rel="stylesheet">
-    <link rel="icon" href="mokepon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <h1 class="texto-animado">Mokepon! 🌱🔥💧</h1>
-    <section id="mascota" class="caja">
-        <h2 class="texto-animado-dos">Elige tu mascota: </h2>
+    <section id="seleccionar-mascota">
+        <h1 class="titulo">Mokepon</h1>
 
-        <div>
-            <label for="Hipodoge" class="hipo">
-                <p>Hipodoge</p>
-                <img src="hipodoge1.png" alt="">
-            </label>
-            <input type="radio" name="mascota" id="Hipodoge"> <br>
+        <h2 class="subtitulo">Elige tu mascota:</h2>
 
-            <label for="Tacupalma" class="tacu">
-                <p>Tacupalma</p>
-                <img src="tacupalma1.png" alt="">
-            </label>
-            <input type="radio" name="mascota" id="Tacupalma"> <br>
+        <div id='contenedorTarjetas' class="tarjetas">
 
-            <label for="Capipeo" class="cap">
-                <p>Capipepo</p>
-                <img src="capipepo1.png" alt="">
-            </label>
-            <input type="radio" name="mascota" id="Capipepo"> <br>
         </div>
 
+        <button id="boton-mascota">Seleccionar</button>
+    </section>
+
+    <section id="ver-mapa">
+        <h2 class="subtitulo">Recorre el mapa con tu mokepon</h2>
+        <canvas id="mapa"></canvas>
+        <button ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverArriba()"
+            ontouchstart="moverArriba()">Arriba</button>
         <div>
-            <label for="Ratigueya" class="rat">
-                <p>Ratigueya</p>
-                <img src="ratigueya1.png" alt="">
-            </label>
-            <input type="radio" name="mascota" id="Ratigueya"> <br>
+            <button onmouseup="detenerMovimiento()" ontouchend="detenerMovimiento()" onmousedown="moverIzquierda()"
+                ontouchstart="moverIzquierda()">Izquierda</button>
+            <button onmouseup="detenerMovimiento()" ontouchend="detenerMovimiento()" onmousedown="moverAbajo()"
+                ontouchstart="moverAbajo()">Abajo</button>
+            <button onmouseup="detenerMovimiento()" ontouchend="detenerMovimiento()" onmousedown="moverDerecha()"
+                ontouchstart="moverDerecha()">Derecha</button>
+        </div>
+    </section>
 
-            <label for="Langostelvia" class="lan">
-                <p>Langostelvia</p>
-                <img src="langostelvia1.png" alt="">
-            </label>
-            <input type="radio" name="mascota" id="Langostelvia"> <br>
+    <section id="seleccionar-ataque">
+        <h1 class="titulo">Mokepon</h1>
 
-            <label for="Pydos" class="py">
-                <p>Pydos</p>
-                <img src="pydos1.png" alt="">
-            </label>
-            <input type="radio" name="mascota" id="Pydos"> <br>
+        <h2 class="subtitulo">Elige tu ataque:</h2>
+
+        <div id='contenedorAtaques' class="tarjetas-ataques">
+
         </div>
 
+        <div id="mensajes">
+            <p id="resultado">Mucha suerte</p>
 
-        <button id="boton-mascota">Continuar ✅</button>
+            <section id="reiniciar">
+                <button id="boton-reiniciar">Reiniciar</button>
+            </section>
+        </div>
+
+        <div class="ataques">
+            <div class="ataques-jugador">
+                <p id="vidas-jugador">0</p>
+                <p id="mascota-jugador"></p>
+                <div id="ataques-del-jugador"></div>
+            </div>
+            <div class="ataques-enemigo">
+                <p id="vidas-enemigo">0</p>
+                <p id="mascota-enemigo"></p>
+                <div id="ataques-del-enemigo"></div>
+            </div>
+        </div>
     </section>
-
-    <section id="ataque">
-        <h2 class="texto-animado-dos">Elige tu ataque: </h2>
-
-        <p>Tu mascota <span id="mascota-jugador" class="animal"></span> tiene <span id="vidas-jugador"
-                class="vidas">3</span> vidas</p>
-        <p>La mascota <span id="mascota-enemigo" class="animal"></span> de tu enemigo tiene <span id="vidas-enemigo"
-                class="vidas">3</span> vidas</p>
-        <p>
-            <button id="boton-fuego" class="fuego">Fuego 🔥</button>
-            <button id="boton-agua" class="agua">Agua 💧</button>
-            <button id="boton-tierra" class="tierra">Tierra 🌱</button>
-        </p>
-
-    </section>
-
-    <section id="mensajes" class="mensajes">
-        <!--<p>Tu mascota atacó con <span id="ataque-jugador"> </span>, la mascota del enemigo atacó con <span id="ataque-enemigo"></span></p>-->
-    </section>
-
-    <section id="reiniciar">
-        <button id="boton-reiniciar">Reiniciar 🔁</button>
-    </section>
-
-
-
     <script src="mokepon.js"></script>
 </body>
 
