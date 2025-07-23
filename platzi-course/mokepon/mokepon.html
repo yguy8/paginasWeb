@@ -5,12 +5,15 @@
     <meta charset="utf-8" />
     <title>MOKEPON!</title>
     <link rel="stylesheet" href="mokepon.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <section id="seleccionar-mascota">
-        <h1 class="titulo">Mokepon</h1>
+        <h1 class="titulo">Mokepon aventuras<br> en la isla</h1>
 
         <h2 class="subtitulo">Elige tu mascota:</h2>
 
@@ -22,7 +25,7 @@
     </section>
 
     <section id="ver-mapa">
-        <h2 class="subtitulo">Recorre el mapa con tu mokepon</h2>
+        <h2 class="subtitulo">Recorre el mapa con tu Mokepon</h2>
         <canvas id="mapa"></canvas>
         <button ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverArriba()"
             ontouchstart="moverArriba()">Arriba</button>

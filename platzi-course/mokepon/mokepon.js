@@ -92,6 +92,12 @@ let capipepo = new Mokepon('Capipepo', 'capipepo1.png', 5, 'capipepo1.png')
 
 let ratigueya = new Mokepon('Ratigueya', 'ratigueya1.png', 5, 'ratigueya1.png')
 
+let pydos = new Mokepon('Pydos', 'pydos1.png', 5, 'pydos1.png')
+
+let langostelvia = new Mokepon('Langostelvia', 'langostelvia1.png', 5, 'langostelvia1.png')
+
+let tacupalma = new Mokepon('Tacupalma', 'tacupalma1.png', 5, 'tacupalma1.png')
+
 let hipodogeEnemigo = new Mokepon('Hipodoge', 'hipodoge1.png', 5, 'hipodoge1.png')
 
 let capipepoEnemigo = new Mokepon('Capipepo', 'capipepo1.png', 5, 'capipepo1.png')
@@ -148,7 +154,7 @@ ratigueyaEnemigo.ataques.push(
     { nombre: '🌱', id: 'boton-tierra' },
 )
 
-mokepones.push(hipodoge, capipepo, ratigueya)
+mokepones.push(hipodoge, capipepo, ratigueya, pydos, langostelvia, tacupalma)
 
 function iniciarJuego() {
 
@@ -168,6 +174,9 @@ function iniciarJuego() {
         inputHipodoge = document.getElementById('Hipodoge')
         inputCapipepo = document.getElementById('Capipepo')
         inputRatigueya = document.getElementById('Ratigueya')
+        inputPydos = document.getElementById('Pydos')
+        inputLangostelvia = document.getElementById('Langostelvia')
+        inputTacupalma = document.getElementById('Tacupalma')
 
     })
 
@@ -371,10 +380,16 @@ function pintarCanvas() {
     hipodogeEnemigo.pintarMokepon()
     capipepoEnemigo.pintarMokepon()
     ratigueyaEnemigo.pintarMokepon()
+    pydosEnemigo.pintarMokepon()
+    langostelviaEnemigo.pintarMokepon()
+    tacupalmaEnemigo.pintarMokepon()
     if (mascotaJugadorObjeto.velocidadX !== 0 || mascotaJugadorObjeto.velocidadY !== 0) {
         revisarColision(hipodogeEnemigo)
         revisarColision(capipepoEnemigo)
         revisarColision(ratigueyaEnemigo)
+        revisarColision(pydosEnemigo)
+        revisarColision(langostelviaEnemigo)
+        revisarColision(tacupalmaEnemigo)
     }
 }
 

@@ -1,12 +1,9 @@
 :root {
     /*hacer variables de los colors*/
-    /*botones*/
-    --colorDeBotonFuego: rgb(234, 96, 10);
-    --colorDeBotonAgua: rgb(3, 132, 237);
-    --colorDeBotonTierra: rgb(24, 196, 12);
-    /*letras títulos*/
-    --letrasMokepon: yellow;
-    --letrasTitulo: rgb(48, 90, 124);
+    /*botones del ataque del mokepon*/
+    --colorDeBoton: rgb(24, 196, 12);
+    /*degradado*/
+    --degradado: linear-gradient(90deg, #041562, #11468F);
     /*letras múlticolor */
     --verde: rgb(65, 209, 17);
     --azul: rgb(2, 200, 255);
@@ -14,10 +11,12 @@
     /*otras letras */
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&display=swap');
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Bitcount', sans-serif;
+    font-weight: bold;
+    background: var(--degradado);
     background-color: #041562;
 }
 
@@ -30,8 +29,8 @@ body {
 
 .titulo {
     color: white;
-    font-size: 32px;
-    font-family: 'Fredoka One', cursive;
+    font-size: 48px;
+    text-shadow: #041562 12px 12px 19px;
 }
 
 .subtitulo {
@@ -46,16 +45,27 @@ body {
 }
 
 .tarjeta-de-mokepon {
-    width: 180px;
-    height: 100px;
-    background: #11468F;
+    width: 200px;
+    height: 120px;
+    background: var(--degradado);
     padding: 10px;
     box-sizing: border-box;
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    box-shadow: #EEEEEE 5px 5px 10px;
+    color: rgb(255, 255, 255);
+}
+
+.tarjeta-de-mokepon:hover {
+    transform: scale(1.05);
+}
+
+.tarjeta-de-mokepon:active {
+    background: #EEEEEE;
+    color: #041562;
+    transform: scale(1.05);
 }
 
 .tarjeta-de-mokepon img {
@@ -67,9 +77,8 @@ body {
     height: 40px;
     border-radius: 20px;
     background: transparent;
-    border: 2px solid white;
+    border: 2px solid var(--colorDeBoton);
     color: white;
-    font-family: 'Poppins', sans-serif;
     margin-top: 30px;
 }
 
@@ -95,7 +104,6 @@ input:checked+label {
     border-color: transparent;
     width: 80px;
     color: white;
-    font-family: 'Poppins', sans-serif;
 }
 
 #mensajes {
@@ -112,7 +120,6 @@ input:checked+label {
 #boton-reiniciar {
     border: none;
     color: #11468F;
-    font-family: 'Poppins', sans-serif;
 }
 
 .ataques {
@@ -147,7 +154,6 @@ input:checked+label {
     background: transparent;
     border: 2px solid white;
     color: white;
-    font-family: 'Poppins', sans-serif;
     margin: 10px 0;
 }
 
