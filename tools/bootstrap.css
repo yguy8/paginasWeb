@@ -1,0 +1,25 @@
+[class *='col']
+
+/*seleccionar todos los elementos que coincidan con*/
+  {
+  padding: 1rem;
+  background-color: purple;
+  border: 2px solid yellow;
+}
+
+body {
+  background-color: rgb(29, 158, 155);
+}
+
+
+/*dimensión de paginas .container-{breakpoint}
+
+Breakpoint	       Class infix	    Dimensions
+X-Small	              None	          <576px
+Small	                  sm	          ≥576px
+Medium	                md       	    ≥768px
+Large	                  lg	          ≥992px
+Extra large           	xl	          ≥1200px
+Extra extra large	     xxl	          ≥1400px
+
+*/
