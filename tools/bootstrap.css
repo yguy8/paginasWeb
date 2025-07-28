@@ -1,16 +1,15 @@
-[class *='col']
-
-/*seleccionar todos los elementos que coincidan con*/
-  {
-  padding: 1rem;
-  background-color: purple;
-  border: 2px solid yellow;
-}
+/* [class *='col'] */
 
 body {
-  background-color: rgb(119, 222, 220);
+  padding: 10px;
+  background-color: #ffd;
 }
 
+.navbar {
+  background: linear-gradient(to right, #ffd064, #f79);
+  ;
+  /* arreglarlo -->box-shadow: #8a8c0b 0px 0px 10px; */
+}
 
 /*dimensión de paginas .container-{breakpoint}
 
