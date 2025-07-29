@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prueba con Boostrap y replica de página</title>
+  <title>Portafolio de Clara</title>
   <!--impotar bootstrap !bcd5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
@@ -33,18 +33,59 @@
             <a class="nav-link" href="#">Proyectos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link">Contacto</a>
+            <a class="nav-link" href="#">Contacto</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" id="tema">Cambiar al modo oscuro</a>
         </ul>
       </div>
     </div>
+
   </nav>
   <!-- Contenido principal -->
+  <section>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-12">
+          <img src="https://i.pinimg.com/736x/21/73/3c/21733c13791917adb32f70c729517d69.jpg" alt="foto de perfil"
+            class="img-fluid rounded-circle mx-auto d-block" width="200" height="200">
+          <h2 class="text-center fw-bolder">Clara Jenhee</h2>
+          <p class="text-center fst-italic">Ingeniera en sistemas</p>
+        </div>
+        <div class="col-md-6 text-center fst-italic fw-bold">
+          <p>Me gusta construir cosas</p>
+        </div>
+      </div>
+
+      <!--Tablero de ajedrez-->
+  </section>
 
   <!--Script de js desde bootstrap (siempre va al final del body)-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-    crossorigin="anonymous"></script>
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous">
+
+      // control de colores
+      var ctema = document.getElementById("tema")
+      ctema.style.cursor = "pointer"
+      var dark = false
+
+      ctema.addEventListener("click", () => {
+
+        if (dark) {
+          document.body.style.backgroundColor = "white";
+          ctema.textContent = "Cambiar al modo claro";
+          dark = false
+
+        } else {
+          document.body.style.backgroundColor = "darkgrey";
+          ctema.textContent = "Cambiar al modo oscuro";
+          ctema.style.color = "black"
+          dark = true
+        }
+
+
+      });
+    </script>
 </body>
 
 
