@@ -33,9 +33,14 @@ body {
   }
 
   .navbar {
+    padding: 2rem;
     margin: 15px;
     border-radius: 10px;
     background-color: var(--bs-primary-text-subtle-blood);
+  }
+  .navbar-collapse{
+    align-items: center;
+    justify-content: space-between;
   }
 
   .navbar a {
