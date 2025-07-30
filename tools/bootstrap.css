@@ -13,6 +13,11 @@
     color: var(--bs-primary-text-emphasis);
   }
 
+  a {
+    color: var(--bs-primary-text-emphasis);
+    text-decoration: none;
+  }
+
   .navbar {
     padding: 1rem;
     margin: fit-content;
@@ -30,7 +35,9 @@
   }
 
   .correo {
-    color: var(--bs-primary-bg-subtle);
+    background-color: var(--bs-primary-text-subtle-blood);
+    color: var(--bs-primary-text-emphasis);
+    border: 10px;
     text-decoration: none;
   }
 
@@ -49,7 +56,19 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    min-height: 400px;
+    min-height: 300px;
+  }
+
+  .iconos-redes i {
+    color: white;
+    font-size: 2rem;
+    margin: 0 10px;
+    transition: all 0.2s ease-in;
+  }
+
+  .iconos-redes a:hover {
+    background-color: var(--bs-primary-text-subtle-blood);
+    border: 1px solid var(--bs-primary-text-emphasis);
   }
 
   /*estrellas fugaces*/
@@ -75,3 +94,5 @@
     opacity: 0;
   }
 } */
+
+  /* Adaptables responsivos  */
