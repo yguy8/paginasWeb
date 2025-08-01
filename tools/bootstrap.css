@@ -1,20 +1,16 @@
   :root {
-    --bs-primary-bg-subtle: #343a40;
-    --bs-primary-text-emphasis: #f8f9fa;
-    --bs-primary-text-subtle-blood: #706c7d;
-    --shooting-star-color: #fee79b;
-    --blue-night: #151570;
-    --star-blue: #0554f2;
-    --star-yellow: #f2c94c;
+    --negro: #343a40;
+    --blanco-letras: #f8f9fa;
+    --morado-oscuro: #706c7d;
   }
 
   body {
-    background-color: var(--bs-primary-bg-subtle);
-    color: var(--bs-primary-text-emphasis);
+    background-color: var(--negro);
+    color: var(--blanco-letras);
   }
 
   a {
-    color: var(--bs-primary-text-emphasis);
+    color: var(--blanco-letras);
     text-decoration: none;
   }
 
@@ -22,8 +18,8 @@
     padding: 1rem;
     margin: fit-content;
     border-radius: 10px;
-    background-color: var(--bs-primary-text-subtle-blood);
-    backdrop-filter: blur(10px);
+    background-color: var(--morado-oscuro);
+    position: sticky;
   }
 
   .navbar-collapse {
@@ -32,51 +28,61 @@
   }
 
   .navbar a {
-    color: var(--bs-primary-text-emphasis);
+    color: var(--blanco-letras);
   }
 
   .correo {
-    background-color: var(--bs-primary-text-subtle-blood);
-    color: var(--bs-primary-text-emphasis);
+    background-color: var(--morado-oscuro);
+    color: var(--blanco-letras);
     border: 10px;
     text-decoration: none;
   }
 
   .correo2 {
-    background-color: var(--bs-primary-bg-subtle);
-    color: var(--bs-primary-text-emphasis);
+    background-color: var(--negro);
+    color: var(--blanco-letras);
     border: none;
     text-decoration: none;
     cursor: pointer;
     padding: 0.5rem 0.5rem;
     border-radius: 5px;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
+
   .tarjeta {
-    background-color: var(--bs-primary-text-subtle-blood);
-    color: var(--bs-primary-text-emphasis);
+    background-color: var(--morado-oscuro);
+    color: var(--blanco-letras);
     border-radius: 10px;
     padding: 1rem;
   }
 
   .btn-tarjeta {
-    background-color: var(--bs-primary-bg-subtle);
-    color: var(--bs-primary-text-emphasis);
+    background-color: var(--negro);
+    color: var(--blanco-letras);
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: var(--blanco-letras);
+      color: var(--negro);
+    }
   }
 
   .seccion-color {
-    background-color: var(--bs-primary-text-subtle-blood);
-    color: var(--bs-primary-text-emphasis);
+    background-color: var(--morado-oscuro);
+    color: var(--blanco-letras);
     padding: 2rem;
     border-radius: 10px;
   }
 
   footer {
-    color: var(--bs-primary-text-emphasis);
+    color: var(--blanco-letras);
     bottom: 0;
     width: 100%;
     padding: 1rem;
