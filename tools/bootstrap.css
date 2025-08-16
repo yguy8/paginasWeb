@@ -1,7 +1,8 @@
   :root {
     --negro: #01012b;
     --blanco: #d1f7ff;
-    --morado-oscuro: #467fa1;
+    --morado-oscuro:#cb0c59; 
+    /* --morado-oscuro: #467fa1; */
     --amarillo: #fee801;
   }
 
@@ -16,6 +17,9 @@
     color: var(--blanco);
     text-decoration: none;
   }
+  h2{
+    padding-left: 2rem;
+  }
 
   .navbar {
     padding: 1rem;
@@ -23,7 +27,6 @@
     border-radius: 10px;
     background-color: var(--morado-oscuro);
     position: sticky;
-
   }
 
   .navbar-collapse {
@@ -40,13 +43,6 @@
   }
 
   .correo {
-    background-color: var(--morado-oscuro);
-    color: var(--blanco);
-    border: 10px;
-    text-decoration: none;
-  }
-
-  .correo2 {
     background-color: var(--negro);
     color: var(--blanco);
     border: none;
@@ -64,16 +60,16 @@
   color: var(--amarillo);
 }
 .sobre-mi {
-  font-family: "Exo", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: bold;
+  padding: 2rem;
+  font-size: larger;
+
 }
 
   .tarjeta {
     background-color: var(--morado-oscuro);
     color: var(--blanco);
     border-radius: 10px;
-    padding: 1rem;
+    padding: 2rem;
   }
 
   .btn-tarjeta {
@@ -89,9 +85,7 @@
       color: var(--negro);
     }
   }
-
   .seccion-color {
-    background-color: var(--morado-oscuro);
     color: var(--blanco);
     padding: 2rem;
     border-radius: 10px;
