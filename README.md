@@ -7,6 +7,5 @@
     un generador de contraseñas hecho en javascript
 - **platzi-course** :
     Es de las clases que he tomado en **Platzi** del curso básico de programación 
-- **tools** : 
-    una prueba para usar bootstrap y tailwind que solo es para ver sus funciones e importar los frameworks
+
   
