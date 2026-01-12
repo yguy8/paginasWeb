@@ -4,9 +4,14 @@
     margin: 0;
 }
 
+:root{
+    --naranja:#ff9d00;
+    --azul:#1596d2;
+}
+
 body {
     /*background-color: #ff9f06;*/
-    background: linear-gradient(to right, #ff9d00, #1596d2);
+    background: var(--azul);
     height: 100vh;
     /* Asegura que el degradado cubra toda la pantalla */
     margin: 0;
