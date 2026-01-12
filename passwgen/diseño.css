@@ -7,6 +7,8 @@
 :root{
     --naranja:#ff9d00;
     --azul:#1596d2;
+    --gris:#7f7f7f;
+    --negro:#121212;
 }
 
 body {
@@ -31,16 +33,6 @@ body {
 
 }
 
-/*logo de password generator*/
-img {
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.516);
-    border-radius: 10px;
-    width: 90%;
-    align-items: center;
-    margin-top: 5%;
-    margin-bottom: 34px;
-}
-
 /*Filas y columnas*/
 .app .fila {
     margin-bottom: 40px;
@@ -55,7 +47,7 @@ img {
 
 /*Estilos de inputs y botones*/
 .app label {
-    line-height: 40px;
+    line-height: 90px;
 }
 
 .app input {
@@ -68,7 +60,7 @@ img {
     width: 100%;
     height: 40px;
     display: inline-block;
-    background-color: #365989;
+    background-color: var(--gris);
     color: rgb(255, 255, 255);
     padding: 10px 20px;
     border: none;
@@ -82,7 +74,7 @@ img {
 }
 
 .app .btn:hover {
-    background-color: #0d3670;
+    background-color: var(--negro);
 }
 
 .app .btn.false {
@@ -104,11 +96,12 @@ img {
 .app .numero-caracteres input {
     margin-top: 23px;
     margin-left: 5px;
-    height: 40px;
+    height: 36px;
     width: 90%;
     cursor: default;
-    background: #60bffa;
+    background: #ffffff;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
     color: #464646;
 }
 
@@ -151,7 +144,7 @@ img {
 .app .fila.generar .btn.btn-generar:after {
     content: "";
     display: inline-block;
-    background: #365989;
+    background: var(--gris);
     width: 14px;
     height: 14px;
     position: absolute;
@@ -163,7 +156,7 @@ img {
 }
 
 .app .fila.generar .col:nth-child(1):hover .btn-generar:after {
-    background: #0d3670;
+    background: var(--negro);
 }
 
 .app .fila.generar .input-password {
