@@ -4,7 +4,7 @@
     margin: 0;
 }
 
-:root{
+:root {
     --naranja:#ff9d00;
     --azul:#1596d2;
     --gris:#7f7f7f;
@@ -12,64 +12,60 @@
 }
 
 body {
-    /*background-color: #ff9f06;*/
     background: var(--azul);
     height: 100vh;
-    /* Asegura que el degradado cubra toda la pantalla */
     margin: 0;
-
     font-family: "Mulish", sans-serif;
     font-optical-sizing: auto;
-    font-weight: weight;
     font-style: normal;
-
 }
 
-/*Donde esta encerrado las funciones*/
+h1{
+    margin:30px;
+}
 .contenedor {
     max-width: 500px;
     width: 90%;
     margin: 40px auto;
-
 }
 
-/*Filas y columnas*/
-.app .fila {
-    margin-bottom: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+/* Tabla principal */
+.app table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.app .col {
-    width: 50%;
+.app td {
+    padding: 10px;
+    vertical-align: middle;
 }
 
-/*Estilos de inputs y botones*/
+/* Labels */
 .app label {
-    line-height: 90px;
+    display: inline-block;
+    line-height: 40px;
+    font-weight: 600;
+    color: #fff;
 }
 
+/* Inputs generales */
 .app input {
     text-align: center;
     border: none;
 }
 
-/*Botones*/
+/* Botones generales */
 .app .btn {
     width: 100%;
     height: 40px;
-    display: inline-block;
     background-color: var(--gris);
-    color: rgb(255, 255, 255);
-    padding: 10px 20px;
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 20px;
-    vertical-align: top;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.516);
+    margin-top: 10px;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.5);
     transition: all .3s ease;
 }
 
@@ -77,71 +73,61 @@ body {
     background-color: var(--negro);
 }
 
-.app .btn.false {
-    background: #1d93c6;
-}
-
 /* ------------------------- */
-/* Fila: Numero de Caracteres */
+/* Número de caracteres fila */
 /* ------------------------- */
-.app .numero-caracteres .botones div {
-    width: 100%;
-}
-
-.app .numero-caracteres .botones div:nth-child(1) button {
-    border-radius: 4px 0 0 4px;
-
-}
-
-.app .numero-caracteres input {
-    margin-top: 23px;
-    margin-left: 5px;
-    height: 36px;
-    width: 90%;
-    cursor: default;
-    background: #ffffff;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    color: #464646;
-}
-
-.app .numero-caracteres .botones div:nth-child(2) button {
-    border-radius: 0 4px 4px 0;
-}
-
-.app .numero-caracteres .botones {
+.app .caracteres-control {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* espacio entre - [input] + */
+}
+
+.app .caracteres-control .btn {
+    width: 40px;
+    height: 36px;
+    margin-top: 0;
+    font-size: 18px;
+    padding: 0;
+    line-height: 36px;
+}
+
+.app #numero-caracteres {
+    height: 36px;
+    width: 60px;
+    text-align: center;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    color: #464646;
+    margin: 0;
 }
 
 /* ------------------------- */
-/* Fila: Generar Contraseña */
+/* Checkboxes (sí/no)        */
 /* ------------------------- */
-.app .fila.generar {
-    margin-bottom: 10px;
+.app input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--naranja); /* color personalizado */
+    margin-top: 10px;
+    transform: scale(1.2); /* más grande y visible */
 }
 
-.app .fila.generar .col:nth-child(1) {
-    width: 30%;
-}
-
-.app .fila.generar .col:nth-child(2) {
-    width: 65%;
-}
-
-.app .fila.generar .btn.btn-generar {
+/* ------------------------- */
+/* Generar contraseña fila   */
+/* ------------------------- */
+.app .btn.btn-generar {
     width: 100%;
     height: 40px;
     font-size: 18px;
-    padding: 0;
     line-height: 40px;
     position: relative;
     z-index: 1;
 }
 
-
-.app .fila.generar .btn.btn-generar:after {
+.app .btn.btn-generar:after {
     content: "";
     display: inline-block;
     background: var(--gris);
@@ -155,15 +141,15 @@ body {
     transition: all .3s ease;
 }
 
-.app .fila.generar .col:nth-child(1):hover .btn-generar:after {
+.app td:hover .btn-generar:after {
     background: var(--negro);
 }
 
-.app .fila.generar .input-password {
+.app .input-password {
     width: 100%;
     background: none;
     border-radius: 4px;
-    border: 1px solid rgb(57, 57, 57);
+    border: 1px solid rgb(57,57,57);
     color: #fff;
     height: 40px;
     line-height: 40px;
@@ -171,73 +157,49 @@ body {
     transition: all .3s ease;
 }
 
-.app .fila.generar .input-password:hover {
-    border: 1px solid rgba(255, 255, 255, .5);
+.app .input-password:hover {
+    border: 1px solid rgba(255,255,255,.5);
 }
 
-.app .fila.generar input::selection {
+.app input::selection {
     background: #5a5acb;
 }
-
-.app .fila.generar input::-moz-selection {
+.app input::-moz-selection {
     background: #212139;
 }
 
 /* ------------------------- */
-/* Fila: Alerta */
+/* Alerta copiado fila       */
 /* ------------------------- */
-.app .fila.alerta {
-    justify-content: flex-end;
-}
-
-.app .fila.alerta .col {
-    width: 65%;
-}
-
-.app .fila.alerta .alerta-copiado {
+.app .alerta-copiado {
     text-align: center;
-    color: rgba(255, 255, 255, 0);
+    color: rgba(255,255,255,0);
     transition: all .3s ease;
 }
 
-.app .fila.alerta .alerta-copiado.active {
-    color: rgba(255, 255, 255, 1);
+.app .alerta-copiado.active {
+    color: rgba(255,255,255,1);
 }
 
-.app .fila.alerta .alerta-copiado p,
-.app .fila.alerta .alerta-copiado i {
+.app .alerta-copiado p,
+.app .alerta-copiado i {
     font-size: 12px;
 }
 
 /* ------------------------- */
-/* Media Queries */
+/* Responsive                */
 /* ------------------------- */
 @media screen and (max-width: 500px) {
-    .logo img {
-        width: 70%;
-    }
-
-    .app .fila {
-        flex-direction: column;
-        margin-bottom: 20px;
-    }
-
-    .app .fila .col {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .app .fila.generar {
-        border-top: 1px solid rgba(255, 255, 255, .25);
-        padding-top: 40px;
-    }
-
-    .app .fila.generar .col:nth-child(1),
-    .app .fila.generar .col:nth-child(2) {
+    .app table, .app tr, .app td {
+        display: block;
         width: 100%;
     }
 
-    .app .fila.generar .btn.btn-generar:after {
+    .app td {
+        margin-bottom: 20px;
+    }
+
+    .app .btn.btn-generar:after {
         top: auto;
         left: 50%;
         right: 50%;
