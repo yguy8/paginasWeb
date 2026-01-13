@@ -20,15 +20,15 @@ body {
     font-style: normal;
 }
 
-h1{
-    margin:30px;
-}
 .contenedor {
     max-width: 500px;
     width: 90%;
     margin: 40px auto;
 }
 
+h1{
+    margin: 40px;
+}
 /* Tabla principal */
 .app table {
     width: 100%;
@@ -80,7 +80,7 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px; /* espacio entre - [input] + */
+    gap: 8px;
 }
 
 .app .caracteres-control .btn {
@@ -104,49 +104,28 @@ h1{
 }
 
 /* ------------------------- */
-/* Checkboxes (sí/no)        */
+/* Checkboxes (sí/no/ambiguos) */
 /* ------------------------- */
 .app input[type="checkbox"] {
     width: 20px;
     height: 20px;
     cursor: pointer;
-    accent-color: var(--naranja); /* color personalizado */
+    accent-color: var(--naranja);
     margin-top: 10px;
-    transform: scale(1.2); /* más grande y visible */
+    transform: scale(1.2);
 }
 
 /* ------------------------- */
 /* Generar contraseña fila   */
 /* ------------------------- */
-.app .btn.btn-generar {
-    width: 100%;
-    height: 40px;
-    font-size: 18px;
-    line-height: 40px;
-    position: relative;
-    z-index: 1;
-}
-
-.app .btn.btn-generar:after {
-    content: "";
-    display: inline-block;
-    background: var(--gris);
-    width: 14px;
-    height: 14px;
-    position: absolute;
-    top: 13px;
-    right: -7px;
-    transform: rotate(45deg);
-    z-index: 9;
-    transition: all .3s ease;
-}
-
-.app td:hover .btn-generar:after {
-    background: var(--negro);
+.password-output {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .app .input-password {
-    width: 100%;
+    flex: 1;
     background: none;
     border-radius: 4px;
     border: 1px solid rgb(57,57,57);
@@ -155,17 +134,57 @@ h1{
     line-height: 40px;
     cursor: pointer;
     transition: all .3s ease;
+    padding: 0 10px;
 }
 
 .app .input-password:hover {
     border: 1px solid rgba(255,255,255,.5);
 }
 
-.app input::selection {
-    background: #5a5acb;
+/* Botón copiar */
+.btn-copy {
+    background: var(--gris);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
 }
-.app input::-moz-selection {
-    background: #212139;
+
+.btn-copy:hover {
+    background: var(--negro);
+}
+
+.btn-copy svg {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+}
+
+/* ------------------------- */
+/* Indicador de fortaleza    */
+/* ------------------------- */
+.password-strength {
+    margin-top: 10px;
+    width: 100%;
+}
+
+#strength-bar {
+    height: 10px;
+    width: 0%;
+    background: red;
+    border-radius: 5px;
+    transition: width 0.3s ease, background 0.3s ease;
+}
+
+#strength-text {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #fff;
+    font-weight: bold;
 }
 
 /* ------------------------- */
@@ -199,10 +218,13 @@ h1{
         margin-bottom: 20px;
     }
 
-    .app .btn.btn-generar:after {
-        top: auto;
-        left: 50%;
-        right: 50%;
-        bottom: -7px;
+    .password-output {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-copy {
+        margin-top: 10px;
+        width: 100%;
     }
 }
