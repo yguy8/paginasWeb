@@ -18,7 +18,7 @@ body {
     background: var(--fondo);
     height: 100vh;
     margin: 0;
-    font-family: "Mulish", sans-serif;
+    font-family: "Lexend", sans-serif;
     color: var(--texto);
 }
 
@@ -170,7 +170,8 @@ h1 {
     line-height: 40px;
     cursor: pointer;
     transition: all .3s ease;
-    padding: 0 10px;
+    padding: 10px 0;
+    margin:10px 0 0 0;
 }
 
 .app .input-password:hover {
@@ -188,6 +189,7 @@ h1 {
     align-items: center;
     justify-content: center;
     transition: background 0.3s ease, transform 0.2s ease;
+    margin: 10px 0 0 0;
 }
 
 .btn-copy:hover {
