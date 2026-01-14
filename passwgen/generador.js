@@ -1,7 +1,5 @@
 (function () {
-    /* ----------------------------- */
     /* Variables y Configuración     */
-    /* ----------------------------- */
 
     var app = document.getElementById('app');
     var inputCaracteres = document.getElementById('numero-caracteres');
@@ -25,9 +23,8 @@
     // Lista de caracteres ambiguos a excluir
     var ambiguosChars = ['O','0','l','1'];
 
-    /* ----------------------------- */
+
     /* Eventos                       */
-    /* ----------------------------- */
 
     app.addEventListener('submit', function (e) {
         e.preventDefault();
@@ -74,41 +71,14 @@
         copiarPassword();
     });
 
-    /* ----------------------------- */
-    /* Funciones                     */
-    /* ----------------------------- */
 
-    function generarPassword() {
-        var caracteresFinales = '';
-        var password = '';
-
-        for (var propiedad in configuracion) {
-            if (configuracion[propiedad] === true && caracteres[propiedad]) {
-                caracteresFinales += caracteres[propiedad] + ' ';
-            }
-        }
-
-        caracteresFinales = caracteresFinales.trim().split(' ');
-
-        // Excluir ambiguos si está marcado
-        if (configuracion.ambiguos) {
-            caracteresFinales = caracteresFinales.filter(c => !ambiguosChars.includes(c));
-        }
-
-        for (var i = 0; i < configuracion.caracteres; i++) {
-            password += caracteresFinales[Math.floor(Math.random() * caracteresFinales.length)];
-        }
-
-        document.getElementById('input-password').value = password;
-        evaluarFortaleza(password);
-    }
+    /* Funciones auxiliares           */
 
     function copiarPassword() {
         var input = document.getElementById('input-password');
         input.select();
         document.execCommand("copy");
 
-        // Cambiar ícono a "copiado"
         var btnCopiar = document.getElementById('btn-copiar');
         btnCopiar.innerHTML = `
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -121,7 +91,6 @@
 
         mostrarToast("Contraseña copiada con éxito");
 
-        // Restaurar ícono original después de 2s
         setTimeout(function () {
             btnCopiar.innerHTML = `
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -133,7 +102,7 @@
                     <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
                 </svg>
             `;
-        }, 2000);
+        }, 3000);
     }
 
     function mostrarToast(mensaje) {
@@ -166,7 +135,75 @@
         }, 2000);
     }
 
-    function evaluarFortaleza(password) {
+/* Funciones de generación segura */
+
+// Generador aleatorio seguro
+function getRandomInt(max) {
+    const array = new Uint32Array(1);
+    window.crypto.getRandomValues(array);
+    return array[0] % max;
+}
+
+// Mezclar array para evitar patrones
+function mezclarArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = getRandomInt(i + 1);
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+// Generación ultra-segura
+function generarPassword() {
+    let caracteresFinales = '';
+    let password = [];
+
+    // Construimos set de caracteres según configuración
+    for (let propiedad in configuracion) {
+        if (configuracion[propiedad] === true && caracteres[propiedad]) {
+            caracteresFinales += caracteres[propiedad] + ' ';
+        }
+    }
+
+    caracteresFinales = caracteresFinales.trim().split(' ');
+
+    // Excluir ambiguos si está marcado
+    if (configuracion.ambiguos) {
+        caracteresFinales = caracteresFinales.filter(c => !ambiguosChars.includes(c));
+    }
+
+    // Garantizamos al menos un número, símbolo y mayúscula
+    if (configuracion.numeros) {
+        let nums = caracteres.numeros.split(' ');
+        password.push(nums[getRandomInt(nums.length)]);
+    }
+    if (configuracion.simbolos) {
+        let syms = caracteres.simbolos.split(' ');
+        password.push(syms[getRandomInt(syms.length)]);
+    }
+    if (configuracion.mayusculas) {
+        let mays = caracteres.mayusculas.split(' ');
+        password.push(mays[getRandomInt(mays.length)]);
+    }
+
+    // Rellenamos el resto con aleatoriedad segura
+    while (password.length < configuracion.caracteres) {
+        password.push(caracteresFinales[getRandomInt(caracteresFinales.length)]);
+    }
+
+    // Mezclamos para que los garantizados no queden siempre al inicio
+    password = mezclarArray(password);
+
+    let resultado = password.join('');
+    document.getElementById('input-password').value = resultado;
+    evaluarFortaleza(resultado);
+}
+
+/* ----------------------------- */
+/* Evaluación de fortaleza       */
+/* ----------------------------- */
+
+function evaluarFortaleza(password) {
     let fuerza = 0;
 
     if (password.length >= 8) fuerza++;
@@ -182,27 +219,27 @@
         case 0:
         case 1:
             bar.style.width = "20%";
-            bar.style.background = "red";
+            bar.style.background = "#ff0000"; // rojo
             text.textContent = "Fortaleza: Muy débil";
             break;
         case 2:
             bar.style.width = "40%";
-            bar.style.background = "orange";
+            bar.style.background = "#ffa500"; // naranja
             text.textContent = "Fortaleza: Débil";
             break;
         case 3:
             bar.style.width = "60%";
-            bar.style.background = "yellow";
+            bar.style.background = "#ffff00"; // amarillo
             text.textContent = "Fortaleza: Media";
             break;
         case 4:
             bar.style.width = "80%";
-            bar.style.background = "lightgreen";
+            bar.style.background = "#adea06"; // verde claro con un toque amarillo
             text.textContent = "Fortaleza: Fuerte";
             break;
         case 5:
             bar.style.width = "100%";
-            bar.style.background = "green";
+            bar.style.background = "#0ad000"; // verde brillante
             text.textContent = "Fortaleza: Muy fuerte";
             break;
     }
@@ -212,7 +249,15 @@
 /* Inicialización                */
 /* ----------------------------- */
 
+// Evento para cuando el usuario escribe directamente en el input
+document.getElementById('numero-caracteres').addEventListener('input', function () {
+    let valor = parseInt(this.value);
+    if (valor >= 8 && valor <= 64) {
+        configuracion.caracteres = valor;
+    }
+});
+
 // Generamos una contraseña inicial al cargar la página
 generarPassword();
 
-}()) 
+}()) // cierre del IIFE
