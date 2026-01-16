@@ -20,45 +20,58 @@ body {
     margin: 0;
     font-family: "Lexend", sans-serif;
     color: var(--texto);
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    justify-content: center; 
 }
 
-.contenedor {
-    max-width: 500px;
-    width: 90%;
-    margin: 40px auto;
-    background: rgba(255,255,255,0.05);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+header {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;         
 }
 
 h1 {
-    margin: 20px;
-    text-align: center;
     font-size: 28px;
-    color: var(--texto);
     font-weight: 700;
+    color: var(--texto);
     text-shadow: 0 0 5px rgba(0,0,0,0.3);
+    margin: 0;                
 }
 
-/* Tabla principal */
-.app table {
-    width: 100%;
-    border-collapse: collapse;
+.contenedor {
+    max-width: 380px;
+    width: 90%;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);     
 }
 
-.app td {
-    padding: 10px;
-    vertical-align: middle;
+/* Controles generales */
+.app fieldset {
+    border: none;
+    padding: 0;
 }
 
-/* Labels */
+.app legend {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--acento);
+}
+
+.control {
+    margin-bottom: 15px;
+}
+
 .app label {
     display: inline-block;
-    line-height: 40px;
     font-weight: 600;
     color: var(--texto);
     letter-spacing: 0.5px;
+    margin-bottom: 5px;
 }
 
 /* Inputs generales */
@@ -85,7 +98,6 @@ h1 {
 
 .app .btn:hover {
     background-color: var(--hover);
-    color: var(--texto);
 }
 
 .app .btn:active,
@@ -93,7 +105,7 @@ h1 {
     transform: scale(0.95);
 }
 
-/* Focus states accesibles */
+/* Focus accesible */
 .app .btn:focus,
 .btn-copy:focus,
 .app input:focus {
@@ -107,11 +119,10 @@ h1 {
     outline-offset: 3px;
 }
 
-/* Número de caracteres fila */
+/* Número de caracteres */
 .app .caracteres-control {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 8px;
 }
 
@@ -127,19 +138,21 @@ h1 {
 .app #numero-caracteres {
     height: 36px;
     width: 70px;
-    text-align: center;
     background: var(--texto);
     border-radius: 5px;
     border: 1px solid var(--gris);
     color: var(--negro);
     box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
 }
 
-/* Validación visual */
 .app #numero-caracteres:invalid {
     border: 2px solid red;
     box-shadow: 0 0 5px red;
+}
+
+#ayuda-caracteres {
+    font-size: 12px;
+    color: var(--gris);
 }
 
 /* Checkboxes */
@@ -148,12 +161,10 @@ h1 {
     height: 20px;
     cursor: pointer;
     accent-color: var(--botones);
-    margin-top: 10px;
     transform: scale(1.2);
-    transition: all 0.3s ease;
 }
 
-/* Generar contraseña fila */
+/* Contraseña generada */
 .password-output {
     display: flex;
     align-items: center;
@@ -168,8 +179,6 @@ h1 {
     color: var(--texto);
     height: 45px;
     line-height: 40px;
-    cursor: pointer;
-    transition: all .3s ease;
     padding: 10px 0;
     margin:10px 0 0 0;
 }
@@ -182,6 +191,7 @@ h1 {
 .btn-copy {
     background: var(--botones);
     border: none;
+    color: var(--texto);
     border-radius: 5px;
     cursor: pointer;
     padding: 6px;
@@ -219,7 +229,6 @@ h1 {
 #strength-text {
     margin-top: 5px;
     font-size: 12px;
-    color: var(--texto);
     font-weight: bold;
     letter-spacing: 0.5px;
 }
@@ -236,22 +245,12 @@ h1 {
     font-weight: bold;
 }
 
-.app .alerta-copiado p,
-.app .alerta-copiado i {
+.app .alerta-copiado p {
     font-size: 12px;
 }
 
 /* Responsive */
 @media screen and (max-width: 500px) {
-    .app table, .app tr, .app td {
-        display: block;
-        width: 100%;
-    }
-
-    .app td {
-        margin-bottom: 20px;
-    }
-
     .password-output {
         flex-direction: column;
         align-items: stretch;
@@ -261,4 +260,16 @@ h1 {
         margin-top: 10px;
         width: 100%;
     }
+}
+
+/* Clase para labels ocultos accesibles */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
 }
