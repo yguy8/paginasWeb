@@ -9,7 +9,7 @@
     --botones:#1E88E5;    
     --hover:#1565C0;       
     --negro:#ffffff;       
-    --gris:#9E9E9E;        
+    --gris:#6e6e6e;        
     --texto:#121212;       
     --acento:#FF5722;      
 
@@ -32,7 +32,7 @@ body.modoOscuro {
     --botones:#4FFE58;     
     --hover:#37c03e;      
     --negro:#121212;       
-    --gris:#616161;       
+    --gris:#dbdbdb;       
     --texto:#ffffff;       
     --acento:#FF9800;
 }
@@ -48,7 +48,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255,255,255,0.08);
+    background: var(--fondo);
     backdrop-filter: blur(8px); /* efecto glass elegante */
     padding: 12px 30px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.4);
@@ -99,20 +99,20 @@ header {
     outline-offset: 2px;
 }
 
-/* Responsive menú */
-@media screen and (max-width: 600px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 12px 20px;
-    }
-    .menu {
-        flex-direction: column;
-        gap: 12px;
-        margin-top: 10px;
-    }
+.btn-modoOscuro{
+    background-color:var(--fondo);
+    border: none;                              
+    font-size: 16px;                  
+    font-weight: bold;                
+    cursor: pointer;                  
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+svg{
+    width: 30px;
+    height: 30px;
+    fill: var(--botones);     
+}
 /* ===== Contenido principal ===== */
 h1 {
     font-size: 28px;
@@ -129,7 +129,7 @@ h1 {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 15px rgba(0,0,0,0.4);     
-    margin-top: 100px; /* espacio para que no tape el navbar */
+    margin-top: 200px; /* espacio para que no tape el navbar */
 }
 
 /* Controles generales */
@@ -344,6 +344,20 @@ h1 {
     .btn-copy {
         margin-top: 10px;
         width: 100%;
+    }
+}
+
+/* Responsive menú */
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 20px;
+    }
+    .menu {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 10px;
     }
 }
 
