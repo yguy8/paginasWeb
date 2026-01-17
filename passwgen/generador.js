@@ -1,5 +1,6 @@
-//modo oscuro boton 
-
+/* -------------------*/
+/* modo oscuro boton */
+/*--------------------*/
 const btnModoOscuro = document.getElementById("btn-modoOscuro");
 
 btnModoOscuro.addEventListener("click", () => {
@@ -213,7 +214,7 @@ window.addEventListener("DOMContentLoaded", () => {
       alertaCopiado.classList.toggle('active', false);
       alertaCopiado.textContent = '';
       alertaCopiado.style.color = '';
-    }, 2000);
+    }, 3000);
   }
 
   /* ----------------------------- */
