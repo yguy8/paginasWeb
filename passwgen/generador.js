@@ -1,3 +1,26 @@
+//modo oscuro boton 
+
+const btnModoOscuro = document.getElementById("btn-modoOscuro");
+
+btnModoOscuro.addEventListener("click", () => {
+  document.body.classList.toggle("modoOscuro");
+
+  // Guardar preferencia
+  if (document.body.classList.contains("modoOscuro")) {
+    localStorage.setItem("theme", "modoOscuro");
+  } else {
+    localStorage.setItem("theme", "claro");
+  }
+});
+
+// Aplicar preferencia al cargar
+window.addEventListener("DOMContentLoaded", () => {
+  if (localStorage.getItem("theme") === "modoOscuro") {
+    document.body.classList.add("modoOscuro");
+  }
+});
+
+
 (function () {
   /* ----------------------------- */
   /* Variables y configuración     */
