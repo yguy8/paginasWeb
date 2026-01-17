@@ -16,7 +16,8 @@ html {
     --negro:#ffffff;       
     --gris:#6e6e6e;        
     --texto:#121212;       
-    --acento:#FF5722;      
+    --acento:#FF5722;
+    --sombra:#b9b9b9;      
 }
 
 body {
@@ -38,6 +39,7 @@ body.modoOscuro {
     --gris:#dbdbdb;       
     --texto:#ffffff;       
     --acento:#FF9800;
+    --sombra:#44649c;
 }
 
 /* ===== Navbar ===== */
@@ -114,7 +116,7 @@ svg {
 
 /* ===== Contenido principal ===== */
 main {
-    margin-top: 160px; /* espacio para que no tape el navbar */
+    margin: 100px 0; /* espacio para que no tape el navbar */
     width: 100%;
     display: flex;
     justify-content: center; 
@@ -209,10 +211,10 @@ main {
 .app #numero-caracteres {
     height: 36px;
     width: 70px;
-    background: var(--texto);
+    background: var(--negro);
+    color: var(--texto);
     border-radius: 5px;
     border: 1px solid var(--gris);
-    color: var(--negro);
     box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
@@ -222,7 +224,7 @@ main {
 }
 
 #ayuda-caracteres {
-    font-size: 12px;
+    font-size: 14px;
     color: var(--gris);
 }
 
@@ -317,98 +319,110 @@ main {
 }
 
 /* ===== Cards Section ===== */
+h2{ 
+    margin:0 0 30px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--texto);
+}
 .cards-section {
-  width: 100%;
-  max-width: 900px;
-  margin: 60px auto;
-  padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 20px;
 }
 
 .cards-section h2 {
-  text-align: center;
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--acento);
-  margin-bottom: 25px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--acento);
+    margin-bottom: 25px;
 }
 
 .cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
-  gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 0 60px;
+}
+
+/* Selecciona la última card */
+.cards-container .card:last-child {
+    grid-column: 1 / -1; /* Hace que ocupe todas las columnas */
 }
 
 .card {
-  background-color: var(--fondo);
-  color: var(--texto);
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
-  border: 1px solid var(--gris);
+    background-color: var(--fondo);
+    color: var(--texto);
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+    border: 1px solid var(--gris);
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px var(--sombra);
 }
 
 .card h3 {
-  color: var(--botones);
-  margin-bottom: 0.8rem;
-  font-size: 18px;
+    color: var(--botones);
+    margin-bottom: 0.8rem;
+    font-size: 18px;
 }
 
 .card p {
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--texto);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--texto);
 }
 
 
 /* ===== Footer ===== */
 .footer {
-  width: 100%;
-  background: var(--fondo);
-  border-top: 1px solid var(--gris);
-  padding: 20px 30px;
-  margin-top: 60px;
-  box-shadow: 0 -2px 6px rgba(0,0,0,0.2);
+    width: 100%;
+    background: var(--fondo);
+    border-top: 1px solid var(--gris);
+    padding: 20px 30px;
+    margin-top: 60px;
+    box-shadow: 0 -2px 6px var(--sombra);
 }
 
 .footer-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
 }
 
 .footer p {
-  font-size: 14px;
-  color: var(--texto);
+    font-size: 14px;
+    color: var(--texto);
 }
 
 .footer-menu {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 .footer-menu li a {
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--botones);
-  transition: color 0.3s ease;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--botones);
+    transition: color 0.3s ease;
 }
 
 .footer-menu li a:hover {
-  color: var(--hover);
+    color: var(--hover);
 }
 
 
