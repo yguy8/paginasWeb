@@ -5,9 +5,9 @@
 }
 
 :root {
-    --fondo:#0D47A1;       
-    --botones:#2E7D32;     
-    --hover:#43A047;      
+    --fondo:#042358;       
+    --botones:#4FFE58;     
+    --hover:#37c03e;      
     --negro:#121212;       
     --gris:#616161;       
     --texto:#ffffff;       
@@ -86,7 +86,8 @@ h1 {
     width: 100%;
     height: 40px;
     background-color: var(--botones);
-    color: var(--texto);
+    font-weight: bold;
+    color: var(--negro);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -191,7 +192,8 @@ h1 {
 .btn-copy {
     background: var(--botones);
     border: none;
-    color: var(--texto);
+    color: var(--negro);
+    font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
     padding: 6px;
